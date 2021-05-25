@@ -1,0 +1,19 @@
+<h1>Er zijn {{count}} woorden in de tekst te vinden:</h1>
+
+<a href="{%url 'home' %}">Start again</a>
+<br/>
+<h1>Ingevoerde tekst:</h1>
+{{tekstinvoer}}
+
+<h1>Word count:</h1>
+
+{% for word, counttotal in sortedwords%}
+
+{{word}} - {{ counttotal }}
+<br/>
+
+
+<br/>
+{%endfor%}
+
+{{sortedwords}}
